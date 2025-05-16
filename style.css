@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+body html {
+    background-color: black;
+    color: white;
+    /* Optional: makes text visible on black */
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Bhai 2', sans-serif;
+}
+
+.headr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+:root {
+    --hover-color: rgb(186, 2, 2);
+    --transition-speed: 0.3s;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 10px 0;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--hover-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.btn button {
+    /* background-color: rgb(14, 70, 200); */
+    background-color: rgb(186, 2, 2);
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn button:hover {
+    transform: scale(1.15);
+    transition: 0.3s ease;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+    background-color: black;
+}
+
+.card {
+    background: black;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.card {
+    background: black !important;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+    color: red;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+
+.MOREBMW {
+    color: rgb(221, 2, 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-size: 40px;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 14px;
+
+
+}
+.card h2{
+    color: 	#FFD700;
+    
+}
+/* Features Section */
+.features-section {
+    display: flex;
+     justify-content: space-around;
+    flex-wrap: wrap;
+    /* background: rgba(0, 0, 0, 0.8); */
+    background-color: black;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.feature {
+    flex: 1;
+    min-width: 250px;
+    padding: 30px;
+    margin: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.feature i {
+    font-size: 3rem;
+    color: var(--hover-color);
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #ccc;
+}
+.poster{
+    width: 100%;
+}
+
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glow effect on hover */
+.card:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Animated gradient border */
+.feature {
+  position: relative;
+}
+
+.feature::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(45deg, red, black);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+/* ================== */
+/* LOCATION SECTION */
+/* ================== */
+.location-section {
+    background-color: #000;
+    padding: 80px 5%;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.location-heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.location-heading h2 span {
+    color: #ba0202;
+}
+
+.location-heading p {
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+.location-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.map-container {
+    flex: 2;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(186, 2, 2, 0.3);
+}
+
+.map {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, transparent 100%);
+}
+
+.dealer-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dealer-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 3px solid #ba0202;
+    transition: all 0.3s ease;
+}
+
+.dealer-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(186, 2, 2, 0.2);
+}
+
+.dealer-card h3 {
+    color: #ba0202;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dealer-card p {
+    margin: 10px 0;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dealer-card i {
+    width: 20px;
+    color: #ba0202;
+}
+
+.dealer-btn {
+    background: #ba0202;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.dealer-btn:hover {
+    background: #ff0000;
+    transform: translateY(-2px);
+}
+
+/* ================== */
+/* FOOTER SECTION */
+/* ================== */
+.bmw-footer {
+    background: #0a0a0a;
+    color: white;
+    padding: 70px 5% 30px;
+    position: relative;
+}
+
+.bmw-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ba0202, transparent);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    padding: 20px;
+}
+
+.footer-col h4 {
+    color: #ba0202;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #ba0202;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-col ul li a:hover {
+    color: #ba0202;
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #ba0202;
+    transform: translateY(-3px);
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.newsletter-form button {
+    background: #ba0202;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: #ff0000;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #ba0202;
+}
+
+
+
+
